@@ -10,29 +10,31 @@ namespace Task
     {
         private string Name { get; set; }
         private int Age { get; set; }
-        
-        
+
+        private string MiddleName { get; set; }
+        string AboutTeacher { get; set; }
+
         public Teacher()
         {
 
         }
-
-        public Teacher(string name, int age)
+        public Teacher(string name, string middleName, int age)
         {
             Name = name;
             Age = age;
-           
+            MiddleName = middleName;    
         }
 
-        public void ChangeInfTeacher(Teacher teacher)
+        public void UpdateTeacher()
         {
-            teacher.Name = Console.ReadLine();
-            Name = teacher.Name;
-            teacher.Age = int.Parse(Console.ReadLine());
-            Age = teacher.Age;
 
+            Console.WriteLine("Enter additional information about the teacher:");
+            AboutTeacher = Console.ReadLine();
             
         }
-
+        public void Show()
+        {
+            Console.WriteLine($"Name: {Name}, age: {Age}, Additional: {AboutTeacher}");
+        }
     }
 }

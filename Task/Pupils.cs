@@ -8,27 +8,27 @@ namespace Task
 {
     class Pupils
     {
-        public string name;
-        private int age;
 
-        public Pupils()
+        private List<Pupil> PupilsList = new List<Pupil>();
+
+        public void AddPupil(Pupil pupil)
         {
+            
+            PupilsList.Add(pupil);
 
         }
-        public Pupils(string name, int age)
+
+        public void Show()
         {
-            this.name = name;
-            this.age = age; 
+            foreach (Pupil pupil in PupilsList)
+            {
+                Console.WriteLine(pupil.ToString());
+            }
         }
 
-        
-       
-        
-       
-        
-        
-        
-        
-        
+
     }
+
+
+    
 }
